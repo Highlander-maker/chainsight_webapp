@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Validators</title>
+</head>
+<body>
+    <h1>Validators</h1>
+    <ul id="validatorsList"></ul>
+
+    <script>
+        fetch('http://127.0.0.1:8080/validators')
+            .then(response => response.json())
+            .then(data => {
+                const list = document.getElementById('validatorsList');
+                data.forEach(validator => {
+                    const item = document.createElement('li');
+                    item.textContent = validator.moniker; // Adjust according to your data structure
+                    list.appendChild(item);
+                });
+            })
+            .catch(error => console.error('Error fetching validators:', error));
+    </script>
+</body>
+</html>

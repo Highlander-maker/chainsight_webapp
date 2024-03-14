@@ -1,0 +1,20 @@
+.validators-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .validators-table th,
+  .validators-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  .validators-table th {
+    background-color: #f2f2f2;
+  }
+  
+  .validators-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
